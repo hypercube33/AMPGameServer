@@ -1,5 +1,13 @@
 [
     {
+        "UpdateStageName": "Scan available Quake II maps",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; ROOT='q2pro/server'; MOD='{{GameDir}}'; OUT=\\\"$ROOT/installed-maps.txt\\\"; TMP=\\\"$ROOT/.installed-maps.tmp\\\"; : > \\\"$TMP\\\"; scan_dir() { D=\\\"$1\\\"; [[ -d \\\"$D\\\" ]] || return 0; if [[ -d \\\"$D/maps\\\" ]]; then find \\\"$D/maps\\\" -maxdepth 1 -type f -iname '*.bsp' -printf '%f\\\\n' 2>/dev/null | sed -E 's/\\\\.[bB][sS][pP]$//' >> \\\"$TMP\\\"; fi; for P in \\\"$D\\\"/*.pak; do [[ -f \\\"$P\\\" ]] || continue; grep -aEo 'maps/[A-Za-z0-9_.+-]+\\\\.[bB][sS][pP]' \\\"$P\\\" 2>/dev/null | sed -E 's#^maps/##; s/\\\\.[bB][sS][pP]$//' >> \\\"$TMP\\\" || true; done; for Z in \\\"$D\\\"/*.pkz; do [[ -f \\\"$Z\\\" ]] || continue; unzip -Z1 \\\"$Z\\\" 2>/dev/null | grep -Ei '^maps/[^/]+\\\\.bsp$' | sed -E 's#^maps/##; s/\\\\.[bB][sS][pP]$//' >> \\\"$TMP\\\" || true; done; }; scan_dir \\\"$ROOT/baseq2\\\"; if [[ \\\"$MOD\\\" != 'baseq2' ]]; then scan_dir \\\"$ROOT/$MOD\\\"; fi; LC_ALL=C sort -fu \\\"$TMP\\\" > \\\"$OUT\\\"; rm -f \\\"$TMP\\\"; COUNT=$(wc -l < \\\"$OUT\\\" | tr -d ' '); echo \\\"Detected $COUNT Quake II maps from baseq2${MOD:+ + $MOD}. List: $OUT\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Calculate Quake II dmflags",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
