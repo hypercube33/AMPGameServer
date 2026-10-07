@@ -16,9 +16,8 @@ Linux-first Quake II dedicated server template using Q2PRO.
 - Frag limit / time limit / dmflags
 - Public master listing
 - Client downloads and FastDL URL
-- Map rotation
+- Editable map rotation
 - Optional Tastyspleen community map download modes
-- Automatic generated rotation for downloaded BSP maps
 
 ### AMP repository
 
@@ -54,6 +53,6 @@ Set **Community Map Pack** before running **Update**:
 - `ClassicDM` - a curated classic DM selection
 - `TastyspleenAll` - downloads all BSP files linked from Tastyspleen's Quake II baseq2 map index
 
-The update stage generates `baseq2/amp-maprotation.cfg` automatically.
+Downloaded maps are installed into `baseq2/maps/`. Map rotation remains explicitly controlled by AMP's **Map Rotation** setting so the giant archive does not try to cram thousands of names into one ancient Quake II CVAR.
 
 The Tastyspleen option is intentionally enormous. Storage has been warned. Humanity has not.
