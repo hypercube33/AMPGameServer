@@ -17,6 +17,17 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Install Weapons of Destruction",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; cd q2pro; if [[ ! -d modsrc/wod/.git ]]; then mkdir -p modsrc; git clone --depth 1 https://github.com/ulatekh/quake2-WOD.git modsrc/wod; else git -C modsrc/wod fetch --depth 1 origin master && git -C modsrc/wod reset --hard origin/master; fi; make -C modsrc/wod clean; make -C modsrc/wod; mkdir -p server/weapons; cp -a modsrc/wod/resources/. server/weapons/; cp -f modsrc/wod/release/game.so server/weapons/gamex86_64.so; chmod +x server/weapons/gamex86_64.so; printf '%s\\n' 'Source: https://github.com/ulatekh/quake2-WOD' 'Installed by AMPGameServer from the maintained Weapons of Destruction source tree.' > server/weapons/AMP-PROVENANCE.txt; echo 'Weapons of Destruction installed to game directory: weapons'\"",
+        "UpdateSourceConditionSetting": "GameDir",
+        "UpdateSourceConditionValue": "weapons",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Classic community DM maps",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
