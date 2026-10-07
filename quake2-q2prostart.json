@@ -1,0 +1,10 @@
+[
+    {
+        "UpdateStageName": "Calculate Quake II dmflags",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; FLAGS=0; [[ '{{DM_NoHealth}}' == '1' ]] && FLAGS=$((FLAGS | 1)); [[ '{{DM_NoItems}}' == '1' ]] && FLAGS=$((FLAGS | 2)); [[ '{{DM_WeaponsStay}}' == '1' ]] && FLAGS=$((FLAGS | 4)); [[ '{{DM_NoFalling}}' == '1' ]] && FLAGS=$((FLAGS | 8)); [[ '{{DM_InstantItems}}' == '1' ]] && FLAGS=$((FLAGS | 16)); [[ '{{DM_SameLevel}}' == '1' ]] && FLAGS=$((FLAGS | 32)); [[ '{{DM_SkinTeams}}' == '1' ]] && FLAGS=$((FLAGS | 64)); [[ '{{DM_ModelTeams}}' == '1' ]] && FLAGS=$((FLAGS | 128)); [[ '{{DM_NoFriendlyFire}}' == '1' ]] && FLAGS=$((FLAGS | 256)); [[ '{{DM_SpawnFarthest}}' == '1' ]] && FLAGS=$((FLAGS | 512)); [[ '{{DM_ForceRespawn}}' == '1' ]] && FLAGS=$((FLAGS | 1024)); [[ '{{DM_NoArmor}}' == '1' ]] && FLAGS=$((FLAGS | 2048)); [[ '{{DM_AllowExit}}' == '1' ]] && FLAGS=$((FLAGS | 4096)); [[ '{{DM_InfiniteAmmo}}' == '1' ]] && FLAGS=$((FLAGS | 8192)); [[ '{{DM_QuadDrop}}' == '1' ]] && FLAGS=$((FLAGS | 16384)); [[ '{{DM_FixedFOV}}' == '1' ]] && FLAGS=$((FLAGS | 32768)); CFG='q2pro/server/baseq2/amp-server.cfg'; mkdir -p \\\"$(dirname \\\"$CFG\\\")\\\"; touch \\\"$CFG\\\"; if grep -qE '^[[:space:]]*set[[:space:]]+dmflags[[:space:]]' \\\"$CFG\\\"; then sed -i -E \\\"s|^[[:space:]]*set[[:space:]]+dmflags[[:space:]].*$|set dmflags \\\\\\\"$FLAGS\\\\\\\"|\\\" \\\"$CFG\\\"; else printf 'set dmflags \\\\\\\"%s\\\\\\\"\\\\n' \\\"$FLAGS\\\" >> \\\"$CFG\\\"; fi; echo \\\"Calculated Quake II dmflags: $FLAGS\\\"\"",
+        "SkipOnFailure": false
+    }
+]
