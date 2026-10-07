@@ -16,7 +16,8 @@
             "status": "source-preserved-modern-linux",
             "source": "https://github.com/ulatekh/quake2-WOD",
             "archive_source": null,
-            "notes": "Modern Linux-capable source tree. Excellent candidate for first-class automatic build/install."
+            "notes": "Modern Linux-capable source tree. Excellent candidate for first-class automatic build/install.",
+            "amp_install": "automatic"
         },
         {
             "id": "ctf",
@@ -26,7 +27,8 @@
             "status": "canonical-classic",
             "source": "https://github.com/id-Software/Quake-2",
             "archive_source": "https://www.threewave.com/",
-            "notes": "Canonical Q2 CTF baseline. Preserve original CTF assets/readmes when packaging."
+            "notes": "Canonical Q2 CTF baseline. Preserve original CTF assets/readmes when packaging.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "4team",
@@ -36,7 +38,8 @@
             "status": "archive-recovery-needed",
             "source": null,
             "archive_source": null,
-            "notes": "Four-sided CTF remembered for X-shaped four-base maps. Need to recover original package and README before automating."
+            "notes": "Four-sided CTF remembered for X-shaped four-base maps. Need to recover original package and README before automating.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "lithium",
@@ -46,7 +49,8 @@
             "status": "surviving-project",
             "source": "https://quake2.lithium.com/",
             "archive_source": "https://quake2.lithium.com/",
-            "notes": "Highly configurable server-side deathmatch mod."
+            "notes": "Highly configurable server-side deathmatch mod.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "action",
@@ -56,7 +60,8 @@
             "status": "actively-maintained",
             "source": "https://github.com/actionquake/distrib",
             "archive_source": null,
-            "notes": "Modern distribution exists; strong automatic-install candidate."
+            "notes": "Modern distribution exists; strong automatic-install candidate.",
+            "amp_install": "automatic-official-release"
         },
         {
             "id": "freezetag",
@@ -66,7 +71,8 @@
             "status": "source-preserved",
             "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/freezetag",
             "archive_source": "https://github.com/dbircsak/freeze-tag",
-            "notes": "Preserved source includes four-team color support."
+            "notes": "Preserved source includes four-team color support.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "ctc",
@@ -76,7 +82,8 @@
             "status": "source-preserved",
             "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/ctc",
             "archive_source": null,
-            "notes": "Original readme explicitly uses +set game ctc."
+            "notes": "Original readme explicitly uses +set game ctc.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "ra2",
@@ -86,7 +93,8 @@
             "status": "archive-recovery-needed",
             "source": null,
             "archive_source": null,
-            "notes": "Classic arena mod. Need clean original package/source and readme."
+            "notes": "Classic arena mod. Need clean original package/source and readme.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "chaos",
@@ -96,7 +104,8 @@
             "status": "source-preserved",
             "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/chaos",
             "archive_source": null,
-            "notes": "Original source preserved; good candidate for x86_64 modernization/build."
+            "notes": "Original source preserved; good candidate for x86_64 modernization/build.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "gloom",
@@ -106,7 +115,8 @@
             "status": "source-preserved",
             "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/Gloom",
             "archive_source": null,
-            "notes": "Humans-vs-aliens total conversion with class/base-building gameplay."
+            "notes": "Humans-vs-aliens total conversion with class/base-building gameplay.",
+            "amp_install": "external-manual-only"
         },
         {
             "id": "jailbreak",
@@ -116,7 +126,8 @@
             "status": "archive-recovery-needed",
             "source": null,
             "archive_source": null,
-            "notes": "Classic team mode. Need original package, maps and readme."
+            "notes": "Classic team mode. Need original package, maps and readme.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "redrover",
@@ -126,7 +137,8 @@
             "status": "archive-recovery-needed",
             "source": null,
             "archive_source": null,
-            "notes": "Team-conversion mode associated with classic Q2 mod packs/Extremities era."
+            "notes": "Team-conversion mode associated with classic Q2 mod packs/Extremities era.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "qpong",
@@ -136,7 +148,8 @@
             "status": "archive-recovery-needed",
             "source": null,
             "archive_source": "https://qpong.sourceforge.net/",
-            "notes": "Quake II/Pong hybrid. Historical mirrors exist; recover package plus original README."
+            "notes": "Quake II/Pong hybrid. Historical mirrors exist; recover package plus original README.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "wf",
@@ -146,7 +159,8 @@
             "status": "source-preserved",
             "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/wf",
             "archive_source": null,
-            "notes": "Class-based CTF; preserved source/readme available."
+            "notes": "Class-based CTF; preserved source/readme available.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "lmctf",
@@ -156,7 +170,8 @@
             "status": "surviving-archive",
             "source": null,
             "archive_source": "https://lmctf.com/",
-            "notes": "Large classic CTF ecosystem with maps, runes and grapple."
+            "notes": "Large classic CTF ecosystem with maps, runes and grapple.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "holywars",
@@ -166,7 +181,8 @@
             "status": "surviving-download",
             "source": null,
             "archive_source": "https://www.moddb.com/mods/holy-wars-quake-ii",
-            "notes": "Halo/Saint gameplay mode. Preserve included docs on any packaging."
+            "notes": "Halo/Saint gameplay mode. Preserve included docs on any packaging.",
+            "amp_install": "preset-manual-package"
         },
         {
             "id": "vortex",
@@ -176,7 +192,8 @@
             "status": "surviving-project",
             "source": null,
             "archive_source": "https://q2vortex.com/",
-            "notes": "RPG/classes/abilities/runes style mod. Verify current server package format."
+            "notes": "RPG/classes/abilities/runes style mod. Verify current server package format.",
+            "amp_install": "external-manual-only"
         }
     ]
 }
