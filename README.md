@@ -75,3 +75,30 @@ The remaining legacy presets currently select their canonical game directory. Th
 Gloom and Vortex remain external/manual-only by project policy; this repository will not rehost their packages.
 
 See `mods/catalog.json` for preservation/install status.
+
+
+### Freeze Tag
+
+Select **Freeze Tag 1.89 (AUTO-INSTALL)** and run **Update**. AMP downloads the original author's repository, installs the original `freeze189.zip` player assets, and rebuilds the Quake II game module for Linux x86_64 as `server/freeze/gamex86_64.so`.
+
+Freeze Tag settings are exposed in the AMP web UI under the **Freeze Tag** category, including point limit, frozen duration, team rebalance threshold, starting weapon/armor, ready mode, voting, and grapple settings.
+
+This Linux build path is new and should be treated as the first compatibility test. If the old source trips over a modern compiler, the Update output should give us the exact failure to patch rather than silently installing a dead module.
+
+### Bots / 3ZB2
+
+Select **3rd Zigock Bot II / 3ZB2 (AUTO-INSTALL)** and run **Update** to build the maintained Yamagi port and install its route/assets package.
+
+After starting the server, bots can be added from the AMP console with:
+
+```text
+sv spb 4
+```
+
+Remove bots with:
+
+```text
+sv rmb 4
+```
+
+3ZB2 is currently a separate bot game module. It is not yet merged into Freeze Tag; the classic Quake II Freeze Tag source does not include bot AI, and we will not claim Freeze-aware bots until thaw/objective behavior is verified.
