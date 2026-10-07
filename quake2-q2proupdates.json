@@ -28,6 +28,17 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Install Action Quake II / AQtion",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; cd q2pro; TMP=modtmp/aqtion; rm -rf \\\"$TMP\\\"; mkdir -p \\\"$TMP\\\" server/action; API=$(wget -qO- https://api.github.com/repos/actionquake/distrib/releases/latest); URL=$(printf '%s' \\\"$API\\\" | grep -o 'https://github.com/actionquake/distrib/releases/download/[^\\\"[:space:]]*linux-x86_64.zip' | head -n 1); test -n \\\"$URL\\\"; echo \\\"Downloading $URL\\\"; wget -q --show-progress -O \\\"$TMP.zip\\\" \\\"$URL\\\"; unzip -q \\\"$TMP.zip\\\" -d \\\"$TMP\\\"; ROOT=$(find \\\"$TMP\\\" -maxdepth 2 -type d -name aqtion | head -n 1); test -n \\\"$ROOT\\\"; if [[ -d \\\"$ROOT/baseaq\\\" ]]; then cp -a \\\"$ROOT/baseaq/.\\\" server/action/; fi; cp -a \\\"$ROOT/action/.\\\" server/action/; chmod +x server/action/gamex86_64.so 2>/dev/null || true; printf '%s\\n' \\\"Source release: $URL\\\" 'Installed from the official Action Quake II / AQtion Linux x86_64 release.' > server/action/AMP-PROVENANCE.txt; rm -rf \\\"$TMP\\\" \\\"$TMP.zip\\\"; echo 'AQtion installed to game directory: action'\"",
+        "UpdateSourceConditionSetting": "GameDir",
+        "UpdateSourceConditionValue": "action",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Classic community DM maps",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
