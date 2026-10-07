@@ -1,0 +1,253 @@
+[
+    {
+        "DisplayName": "Game / Mod Directory",
+        "Category": "Quake II:videogame_asset",
+        "Subcategory": "Game / Mod:extension:1",
+        "Description": "Q2 game directory. baseq2 for vanilla, or a compatible mod directory such as ctf, chaos, arena, lithium or action.",
+        "Keywords": "game,mod,directory",
+        "FieldName": "GameDir",
+        "InputType": "text",
+        "ParamFieldName": "GameDir",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "baseq2",
+        "Placeholder": "baseq2",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "Server:dns",
+        "Subcategory": "General:dns:1",
+        "Description": "Hostname displayed to players.",
+        "Keywords": "hostname,name",
+        "FieldName": "hostname",
+        "InputType": "text",
+        "ParamFieldName": "hostname",
+        "DefaultValue": "AMP Powered Quake II",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Maximum Players",
+        "Category": "Server:dns",
+        "Subcategory": "General:dns:1",
+        "Description": "Maximum connected players.",
+        "Keywords": "players,maxclients",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "maxclients",
+        "DefaultValue": "16",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "Server:dns",
+        "Subcategory": "Security:lock:1",
+        "Description": "Join password. Leave blank for public access.",
+        "Keywords": "password",
+        "FieldName": "password",
+        "InputType": "Password",
+        "ParamFieldName": "password",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "RCON Password",
+        "Category": "Server:dns",
+        "Subcategory": "Security:lock:1",
+        "Description": "Remote console password.",
+        "Keywords": "rcon,password",
+        "FieldName": "rcon_password",
+        "InputType": "Password",
+        "ParamFieldName": "rcon_password",
+        "DefaultValue": "{{newguid()}}",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Public Server",
+        "Category": "Server:dns",
+        "Subcategory": "Browser:public:1",
+        "Description": "Advertise to configured Quake II master servers.",
+        "Keywords": "public,master",
+        "FieldName": "public",
+        "InputType": "checkbox",
+        "ParamFieldName": "public",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Deathmatch",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Mode:sports_esports:1",
+        "Description": "Enable deathmatch.",
+        "Keywords": "deathmatch",
+        "FieldName": "deathmatch",
+        "InputType": "checkbox",
+        "ParamFieldName": "deathmatch",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Co-op",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Mode:sports_esports:1",
+        "Description": "Enable cooperative mode.",
+        "Keywords": "coop",
+        "FieldName": "coop",
+        "InputType": "checkbox",
+        "ParamFieldName": "coop",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Frag Limit",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Limits:timer:1",
+        "Description": "Frags required to end the map. 0 disables.",
+        "Keywords": "fraglimit",
+        "FieldName": "fraglimit",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "fraglimit",
+        "DefaultValue": "30",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Time Limit",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Limits:timer:1",
+        "Description": "Minutes before map change. 0 disables.",
+        "Keywords": "timelimit",
+        "FieldName": "timelimit",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "timelimit",
+        "DefaultValue": "15",
+        "Suffix": "minutes",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "DM Flags",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Rules:tune:1",
+        "Description": "Quake II dmflags bitmask.",
+        "Keywords": "dmflags",
+        "FieldName": "dmflags",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "dmflags",
+        "DefaultValue": "0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Startup Map",
+        "Category": "Maps:map",
+        "Subcategory": "Rotation:shuffle:1",
+        "Description": "Map loaded at server startup.",
+        "Keywords": "map,startup",
+        "FieldName": "StartupMap",
+        "InputType": "text",
+        "ParamFieldName": "StartupMap",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "q2dm1",
+        "Placeholder": "q2dm1",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Map Rotation",
+        "Category": "Maps:map",
+        "Subcategory": "Rotation:shuffle:1",
+        "Description": "Space-separated map names. Keep this intentionally sane even if you install the giant archive.",
+        "Keywords": "maps,rotation,sv_maplist",
+        "FieldName": "sv_maplist",
+        "InputType": "Textarea",
+        "ParamFieldName": "sv_maplist",
+        "DefaultValue": "q2dm1 q2dm2 q2dm3 q2dm4 q2dm5 q2dm6 q2dm7 q2dm8",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Community Map Pack",
+        "Category": "Maps:map",
+        "Subcategory": "Downloads:download:1",
+        "Description": "Optional maps downloaded during Update. TastyspleenAll can be very large.",
+        "Keywords": "maps,pack,tastyspleen",
+        "FieldName": "MapPack",
+        "InputType": "enum",
+        "ParamFieldName": "MapPack",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "None",
+        "EnumValues": {
+            "None": "None",
+            "ClassicDM": "Classic DM selection",
+            "TastyspleenAll": "Tastyspleen - ALL BSP maps"
+        }
+    },
+    {
+        "DisplayName": "Allow Downloads",
+        "Category": "Downloads:download",
+        "Subcategory": "Client Downloads:cloud_download:1",
+        "Description": "Allow clients to download missing content.",
+        "Keywords": "download",
+        "FieldName": "allow_download",
+        "InputType": "checkbox",
+        "ParamFieldName": "allow_download",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Allow Map Downloads",
+        "Category": "Downloads:download",
+        "Subcategory": "Client Downloads:cloud_download:1",
+        "Description": "2 allows maps from loose files and pack files.",
+        "Keywords": "maps,download",
+        "FieldName": "allow_download_maps",
+        "InputType": "enum",
+        "ParamFieldName": "allow_download_maps",
+        "DefaultValue": "2",
+        "EnumValues": {
+            "0": "Disabled",
+            "1": "Loose files only",
+            "2": "Loose files and pack files"
+        }
+    },
+    {
+        "DisplayName": "HTTP FastDL URL",
+        "Category": "Downloads:download",
+        "Subcategory": "FastDL:speed:1",
+        "Description": "Optional HTTP/HTTPS content mirror root.",
+        "Keywords": "fastdl,http",
+        "FieldName": "sv_downloadserver",
+        "InputType": "text",
+        "ParamFieldName": "sv_downloadserver",
+        "DefaultValue": "",
+        "Placeholder": "https://example.com/q2/",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server FPS",
+        "Category": "Advanced:settings",
+        "Subcategory": "Q2PRO:tune:1",
+        "Description": "10 is safest for classic mods.",
+        "Keywords": "fps,sv_fps",
+        "FieldName": "sv_fps",
+        "InputType": "number",
+        "MinValue": "10",
+        "MaxValue": "60",
+        "ParamFieldName": "sv_fps",
+        "DefaultValue": "10",
+        "EnumValues": {}
+    }
+]
