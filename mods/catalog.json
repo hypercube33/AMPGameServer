@@ -194,6 +194,17 @@
             "archive_source": "https://q2vortex.com/",
             "notes": "RPG/classes/abilities/runes style mod. Verify current server package format.",
             "amp_install": "external-manual-only"
+        },
+        {
+            "id": "koth",
+            "name": "King of the Hill",
+            "priority": "must-have",
+            "game_dir": "koth",
+            "status": "archive-recovery-needed",
+            "source": null,
+            "archive_source": null,
+            "notes": "Must-have classic mode. Recover original implementation/package and README; suitable for learned-bot objective training.",
+            "amp_install": "preset-manual-package"
         }
     ]
 }
