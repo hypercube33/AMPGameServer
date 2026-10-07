@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 27910,
+        "Ref": "ServerPort",
+        "Name": "Game / Query / RCON Port",
+        "Description": "Quake II gameplay, server query and connectionless RCON"
+    }
+]
