@@ -66,7 +66,9 @@ The **Game / Mod** setting now selects the value passed to Q2PRO as `+set game`.
 
 Current presets include Vanilla, Weapons of Destruction, Action Quake II/AQtion, ThreeWave CTF, 4-Team CTF, Freeze Tag, Catch the Chicken, Rocket Arena 2, Chaos Deathmatch, Jailbreak, Red Rover, QPong, Weapons Factory CTF, LMCTF, Holy Wars II, Lithium II, Gloom and Vortex.
 
-**Weapons of Destruction** is currently a verified one-click installer: select it, run **Update**, then start the server. AMP builds the maintained Linux source and installs its original resources into `server/weapons/`.
+**Weapons of Destruction** is a verified one-click installer: select it, run **Update**, then start the server. AMP builds the maintained Linux source and installs its original resources into `server/weapons/`.
+
+**Action Quake II / AQtion** is also a verified one-click installer. AMP downloads the current official Linux x86_64 AQtion release, installs the content into `server/action/`, and preserves the official package provenance. The upstream package is roughly 500 MB.
 
 The remaining legacy presets currently select their canonical game directory. Their automatic installers are being added only as each original package/source is recovered and verified. This keeps the AMP UI useful without presenting a fake install button that produces a dead server.
 
