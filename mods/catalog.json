@@ -1,0 +1,182 @@
+{
+    "schema_version": 1,
+    "purpose": "Quake II mod catalog for future AMP presets/installers",
+    "policy": {
+        "preserve_original_readmes": true,
+        "preserve_author_credit": true,
+        "prefer_source_builds_on_linux": true,
+        "mirror_binary_assets_only_when_redistribution_terms_are_clear": true
+    },
+    "mods": [
+        {
+            "id": "wod",
+            "name": "Weapons of Destruction",
+            "priority": "must-have",
+            "game_dir": "weapons",
+            "status": "source-preserved-modern-linux",
+            "source": "https://github.com/ulatekh/quake2-WOD",
+            "archive_source": null,
+            "notes": "Modern Linux-capable source tree. Excellent candidate for first-class automatic build/install."
+        },
+        {
+            "id": "ctf",
+            "name": "ThreeWave / Quake II CTF",
+            "priority": "must-have",
+            "game_dir": "ctf",
+            "status": "canonical-classic",
+            "source": "https://github.com/id-Software/Quake-2",
+            "archive_source": "https://www.threewave.com/",
+            "notes": "Canonical Q2 CTF baseline. Preserve original CTF assets/readmes when packaging."
+        },
+        {
+            "id": "4team",
+            "name": "4-Team CTF",
+            "priority": "must-have",
+            "game_dir": "4team",
+            "status": "archive-recovery-needed",
+            "source": null,
+            "archive_source": null,
+            "notes": "Four-sided CTF remembered for X-shaped four-base maps. Need to recover original package and README before automating."
+        },
+        {
+            "id": "lithium",
+            "name": "Lithium II",
+            "priority": "must-have",
+            "game_dir": "lithium",
+            "status": "surviving-project",
+            "source": "https://quake2.lithium.com/",
+            "archive_source": "https://quake2.lithium.com/",
+            "notes": "Highly configurable server-side deathmatch mod."
+        },
+        {
+            "id": "action",
+            "name": "Action Quake II / AQtion",
+            "priority": "must-have",
+            "game_dir": "action",
+            "status": "actively-maintained",
+            "source": "https://github.com/actionquake/distrib",
+            "archive_source": null,
+            "notes": "Modern distribution exists; strong automatic-install candidate."
+        },
+        {
+            "id": "freezetag",
+            "name": "Freeze Tag",
+            "priority": "must-have",
+            "game_dir": "freeze",
+            "status": "source-preserved",
+            "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/freezetag",
+            "archive_source": "https://github.com/dbircsak/freeze-tag",
+            "notes": "Preserved source includes four-team color support."
+        },
+        {
+            "id": "ctc",
+            "name": "Catch the Chicken",
+            "priority": "must-have",
+            "game_dir": "ctc",
+            "status": "source-preserved",
+            "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/ctc",
+            "archive_source": null,
+            "notes": "Original readme explicitly uses +set game ctc."
+        },
+        {
+            "id": "ra2",
+            "name": "Rocket Arena 2",
+            "priority": "must-have",
+            "game_dir": "arena",
+            "status": "archive-recovery-needed",
+            "source": null,
+            "archive_source": null,
+            "notes": "Classic arena mod. Need clean original package/source and readme."
+        },
+        {
+            "id": "chaos",
+            "name": "Chaos Deathmatch",
+            "priority": "must-have",
+            "game_dir": "chaos",
+            "status": "source-preserved",
+            "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/chaos",
+            "archive_source": null,
+            "notes": "Original source preserved; good candidate for x86_64 modernization/build."
+        },
+        {
+            "id": "gloom",
+            "name": "Gloom",
+            "priority": "must-have",
+            "game_dir": "gloom",
+            "status": "source-preserved",
+            "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/Gloom",
+            "archive_source": null,
+            "notes": "Humans-vs-aliens total conversion with class/base-building gameplay."
+        },
+        {
+            "id": "jailbreak",
+            "name": "Jailbreak",
+            "priority": "high",
+            "game_dir": "jail",
+            "status": "archive-recovery-needed",
+            "source": null,
+            "archive_source": null,
+            "notes": "Classic team mode. Need original package, maps and readme."
+        },
+        {
+            "id": "redrover",
+            "name": "Red Rover",
+            "priority": "high",
+            "game_dir": "redrover",
+            "status": "archive-recovery-needed",
+            "source": null,
+            "archive_source": null,
+            "notes": "Team-conversion mode associated with classic Q2 mod packs/Extremities era."
+        },
+        {
+            "id": "qpong",
+            "name": "QPong",
+            "priority": "high",
+            "game_dir": "qpong",
+            "status": "archive-recovery-needed",
+            "source": null,
+            "archive_source": "https://qpong.sourceforge.net/",
+            "notes": "Quake II/Pong hybrid. Historical mirrors exist; recover package plus original README."
+        },
+        {
+            "id": "wf",
+            "name": "Weapons Factory CTF",
+            "priority": "high",
+            "game_dir": "wf",
+            "status": "source-preserved",
+            "source": "https://github.com/Paril/quake2-source-archive/tree/master/sources/wf",
+            "archive_source": null,
+            "notes": "Class-based CTF; preserved source/readme available."
+        },
+        {
+            "id": "lmctf",
+            "name": "LMCTF",
+            "priority": "high",
+            "game_dir": "lmctf",
+            "status": "surviving-archive",
+            "source": null,
+            "archive_source": "https://lmctf.com/",
+            "notes": "Large classic CTF ecosystem with maps, runes and grapple."
+        },
+        {
+            "id": "holywars",
+            "name": "Holy Wars II",
+            "priority": "high",
+            "game_dir": "holywars",
+            "status": "surviving-download",
+            "source": null,
+            "archive_source": "https://www.moddb.com/mods/holy-wars-quake-ii",
+            "notes": "Halo/Saint gameplay mode. Preserve included docs on any packaging."
+        },
+        {
+            "id": "vortex",
+            "name": "Vortex",
+            "priority": "high",
+            "game_dir": "vortex",
+            "status": "surviving-project",
+            "source": null,
+            "archive_source": "https://q2vortex.com/",
+            "notes": "RPG/classes/abilities/runes style mod. Verify current server package format."
+        }
+    ]
+}
