@@ -1,0 +1,10 @@
+[
+    {
+        "ConfigFile": "baseq2/amp-server.cfg",
+        "ConfigType": "kvp",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigFormat": "set {0} \"{1}\"",
+        "ConfigFormatRegex": "^(?:\\/\\/\\s*)?set\\s+(?<key>\\S+)\\s+\"?(?<value>.*?)\"?\\s*(?:\\/\\/.*)?$"
+    }
+]
