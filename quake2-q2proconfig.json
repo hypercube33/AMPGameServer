@@ -16,7 +16,7 @@
             "action": "Action Quake II / AQtion (AUTO-INSTALL)",
             "ctf": "ThreeWave / Quake II CTF",
             "4team": "4-Team CTF",
-            "freeze": "Freeze Tag",
+            "freeze": "Freeze Tag 1.89 (AUTO-INSTALL)",
             "ctc": "Catch the Chicken",
             "arena": "Rocket Arena 2",
             "chaos": "Chaos Deathmatch",
@@ -29,7 +29,8 @@
             "lithium": "Lithium II",
             "gloom": "Gloom (external/manual only)",
             "vortex": "Vortex (external/manual only)",
-            "koth": "King of the Hill"
+            "koth": "King of the Hill",
+            "3zb2": "3rd Zigock Bot II / 3ZB2 (AUTO-INSTALL)"
         }
     },
     {
