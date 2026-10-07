@@ -39,6 +39,28 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Install 3rd Zigock Bot II / 3ZB2",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; cd q2pro; if [[ ! -d modsrc/3zb2/.git ]]; then mkdir -p modsrc; git clone --depth 1 https://github.com/yquake2/3zb2.git modsrc/3zb2; else git -C modsrc/3zb2 fetch --depth 1 origin master && git -C modsrc/3zb2 reset --hard origin/master; fi; make -C modsrc/3zb2 clean; make -C modsrc/3zb2; unzip -q -o modsrc/3zb2/misc/assets.zip -d server; mkdir -p server/3zb2; cp -f modsrc/3zb2/release/game.so server/3zb2/gamex86_64.so; chmod +x server/3zb2/gamex86_64.so; cp -f modsrc/3zb2/README.md server/3zb2/README-upstream.md; printf '%s\\n' 'Source: https://github.com/yquake2/3zb2' '3rd Zigock Bot II port maintained for modern Quake II engines.' > server/3zb2/AMP-PROVENANCE.txt; echo '3ZB2 installed. Spawn bots from console with: sv spb <count>'\"",
+        "UpdateSourceConditionSetting": "GameDir",
+        "UpdateSourceConditionValue": "3zb2",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Install Freeze Tag 1.89",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; cd q2pro; if [[ ! -d modsrc/freezetag/.git ]]; then mkdir -p modsrc; git clone --depth 1 https://github.com/dbircsak/freeze-tag.git modsrc/freezetag; else git -C modsrc/freezetag fetch --depth 1 origin master && git -C modsrc/freezetag reset --hard origin/master; fi; rm -rf modtmp/freeze; mkdir -p modtmp/freeze server/freeze; unzip -q -o modsrc/freezetag/freeze189.zip -d modtmp/freeze; PKGDIR=$(find modtmp/freeze -type d -iname freeze | head -n 1); if [[ -n \\\"$PKGDIR\\\" ]]; then cp -a \\\"$PKGDIR/.\\\" server/freeze/; else cp -a modtmp/freeze/. server/freeze/; fi; cd modsrc/freezetag/quake2; gcc -std=gnu89 -D_GNU_SOURCE -D__linux__ -fcommon -fPIC -shared -O2 -fno-strict-aliasing -Wno-implicit-function-declaration -Wno-int-conversion -o ../../../server/freeze/gamex86_64.so *.c -lm; cd ../../..; chmod +x server/freeze/gamex86_64.so; cp -f modsrc/freezetag/LICENSE server/freeze/LICENSE-freeze-tag.txt; cp -f modsrc/freezetag/README.md server/freeze/README-upstream.md; printf '%s\\n' 'Source: https://github.com/dbircsak/freeze-tag' 'Original player package: freeze189.zip' 'Linux x86_64 game module rebuilt from the original Quake II Freeze Tag source.' > server/freeze/AMP-PROVENANCE.txt; rm -rf modtmp/freeze; echo 'Freeze Tag 1.89 installed to game directory: freeze'\"",
+        "UpdateSourceConditionSetting": "GameDir",
+        "UpdateSourceConditionValue": "freeze",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Classic community DM maps",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
