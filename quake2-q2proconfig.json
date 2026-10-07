@@ -157,19 +157,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "DM Flags",
-        "Category": "Gameplay:joystick",
-        "Subcategory": "Rules:tune:1",
-        "Description": "Quake II dmflags bitmask.",
-        "Keywords": "dmflags",
-        "FieldName": "dmflags",
-        "InputType": "number",
-        "MinValue": "0",
-        "ParamFieldName": "dmflags",
-        "DefaultValue": "0",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Startup Map",
         "Category": "Maps:map",
         "Subcategory": "Rotation:shuffle:1",
@@ -269,5 +256,261 @@
         "ParamFieldName": "sv_fps",
         "DefaultValue": "10",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "No Health",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Disable health pickups. Quake II dmflags bit 1.",
+        "Keywords": "dmflags,deathmatch,DM_NoHealth",
+        "FieldName": "DM_NoHealth",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_NoHealth",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "No Items",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Disable powerups and other non-weapon/non-ammo items. Quake II dmflags bit 2.",
+        "Keywords": "dmflags,deathmatch,DM_NoItems",
+        "FieldName": "DM_NoItems",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_NoItems",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Weapons Stay",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Weapons remain available after being picked up. Quake II dmflags bit 4.",
+        "Keywords": "dmflags,deathmatch,DM_WeaponsStay",
+        "FieldName": "DM_WeaponsStay",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_WeaponsStay",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "No Falling Damage",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Disable falling damage. Quake II dmflags bit 8.",
+        "Keywords": "dmflags,deathmatch,DM_NoFalling",
+        "FieldName": "DM_NoFalling",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_NoFalling",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Instant Items",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Use applicable items immediately on pickup. Quake II dmflags bit 16.",
+        "Keywords": "dmflags,deathmatch,DM_InstantItems",
+        "FieldName": "DM_InstantItems",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_InstantItems",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Same Level",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Do not advance to another level at the end of a match. Quake II dmflags bit 32.",
+        "Keywords": "dmflags,deathmatch,DM_SameLevel",
+        "FieldName": "DM_SameLevel",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_SameLevel",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Skin Teams",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Use player skin for team assignment. Quake II dmflags bit 64.",
+        "Keywords": "dmflags,deathmatch,DM_SkinTeams",
+        "FieldName": "DM_SkinTeams",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_SkinTeams",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Model Teams",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Use player model for team assignment. Quake II dmflags bit 128.",
+        "Keywords": "dmflags,deathmatch,DM_ModelTeams",
+        "FieldName": "DM_ModelTeams",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_ModelTeams",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "No Friendly Fire",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Disable damage to teammates. Quake II dmflags bit 256.",
+        "Keywords": "dmflags,deathmatch,DM_NoFriendlyFire",
+        "FieldName": "DM_NoFriendlyFire",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_NoFriendlyFire",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Spawn Farthest",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Prefer spawn points farthest from other players. Quake II dmflags bit 512.",
+        "Keywords": "dmflags,deathmatch,DM_SpawnFarthest",
+        "FieldName": "DM_SpawnFarthest",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_SpawnFarthest",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Force Respawn",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Automatically respawn players after death. Quake II dmflags bit 1024.",
+        "Keywords": "dmflags,deathmatch,DM_ForceRespawn",
+        "FieldName": "DM_ForceRespawn",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_ForceRespawn",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "No Armor",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Disable armor pickups. Quake II dmflags bit 2048.",
+        "Keywords": "dmflags,deathmatch,DM_NoArmor",
+        "FieldName": "DM_NoArmor",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_NoArmor",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Allow Exit",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Allow map exit triggers during deathmatch. Quake II dmflags bit 4096.",
+        "Keywords": "dmflags,deathmatch,DM_AllowExit",
+        "FieldName": "DM_AllowExit",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_AllowExit",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Infinite Ammo",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Weapons do not consume ammunition. Quake II dmflags bit 8192.",
+        "Keywords": "dmflags,deathmatch,DM_InfiniteAmmo",
+        "FieldName": "DM_InfiniteAmmo",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_InfiniteAmmo",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Quad Drop",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Drop Quad Damage when a player carrying it dies. Quake II dmflags bit 16384.",
+        "Keywords": "dmflags,deathmatch,DM_QuadDrop",
+        "FieldName": "DM_QuadDrop",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_QuadDrop",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Fixed FOV",
+        "Category": "Gameplay:joystick",
+        "Subcategory": "Deathmatch Flags:toggle_on:2",
+        "Description": "Force the standard field of view. Quake II dmflags bit 32768.",
+        "Keywords": "dmflags,deathmatch,DM_FixedFOV",
+        "FieldName": "DM_FixedFOV",
+        "InputType": "checkbox",
+        "ParamFieldName": "DM_FixedFOV",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
     }
 ]
