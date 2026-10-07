@@ -1,0 +1,39 @@
+[
+    {
+        "UpdateStageName": "Build Q2PRO dedicated server",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; cd q2pro; if [[ ! -d source/.git ]]; then git clone --depth 1 https://github.com/q2pro/q2pro.git source; else git -C source fetch --depth 1 origin master && git -C source reset --hard origin/master; fi; rm -rf build; meson setup -Dsystem-wide=false -Dlibpng=disabled -Dlibjpeg=disabled -Dlibcurl=disabled -Dsdl2=disabled -Dopenal=disabled -Davcodec=disabled -Dsoftware-sound=disabled -Dx11=disabled -Dwayland=disabled build source; meson compile -C build q2proded gamex86_64; mkdir -p server/baseq2; cp -f build/q2proded server/q2proded; chmod +x server/q2proded; if [[ -f build/gamex86_64.so ]]; then cp -f build/gamex86_64.so server/baseq2/gamex86_64.so; fi; echo 'Q2PRO dedicated server built.'\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create default AMP server config",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; mkdir -p q2pro/server/baseq2/maps; CFG=q2pro/server/baseq2/amp-server.cfg; if [[ ! -f \\\"$CFG\\\" ]]; then printf '%s\\n' 'set hostname \\\"AMP Powered Quake II\\\"' 'set maxclients \\\"16\\\"' 'set password \\\"\\\"' 'set rcon_password \\\"\\\"' 'set public \\\"1\\\"' 'set deathmatch \\\"1\\\"' 'set coop \\\"0\\\"' 'set fraglimit \\\"30\\\"' 'set timelimit \\\"15\\\"' 'set dmflags \\\"0\\\"' 'set sv_maplist \\\"q2dm1 q2dm2 q2dm3 q2dm4 q2dm5 q2dm6 q2dm7 q2dm8\\\"' 'set allow_download \\\"1\\\"' 'set allow_download_maps \\\"2\\\"' 'set allow_download_models \\\"1\\\"' 'set allow_download_sounds \\\"1\\\"' 'set allow_download_players \\\"0\\\"' 'set sv_downloadserver \\\"\\\"' 'set sv_fps \\\"10\\\"' 'set logfile \\\"2\\\"' 'set sys_console \\\"2\\\"' 'setmaster master.q2servers.com master.quakeservers.net netdome.biz' > \\\"$CFG\\\"; fi\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Classic community DM maps",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; mkdir -p q2pro/server/baseq2/maps; cd q2pro/server/baseq2/maps; ROOT='https://tastyspleen.net/~quake2/baseq2/maps'; for MAP in ztn2dm1.bsp ztn2dm2.bsp ztn2dm3.bsp ztn2dm4.bsp ztn2dm5.bsp ztndm3q2.bsp aerowalk.bsp q2rdm1.bsp q2rdm2.bsp q2rdm3.bsp q2rdm4.bsp q2rdm5.bsp q2rdm6.bsp; do [[ -s \\\"$MAP\\\" ]] || wget -q --show-progress -O \\\"$MAP.tmp\\\" \\\"$ROOT/$MAP\\\" && mv \\\"$MAP.tmp\\\" \\\"$MAP\\\" || rm -f \\\"$MAP.tmp\\\"; done\"",
+        "UpdateSourceConditionSetting": "MapPack",
+        "UpdateSourceConditionValue": "ClassicDM",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Tastyspleen community map archive",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; mkdir -p q2pro/server/baseq2/maps; cd q2pro/server/baseq2/maps; ROOT='https://tastyspleen.net/~quake2/baseq2/maps/'; wget -qO- \\\"$ROOT\\\" | grep -Eoi 'href=\\\"[^\\\"]+\\\\.bsp\\\"' | sed -E 's/^href=\\\"//; s/\\\"$//' | grep -vE '[/\\\\]' | sort -u | while IFS= read -r MAP; do [[ -z \\\"$MAP\\\" || -s \\\"$MAP\\\" ]] && continue; echo \\\"Downloading $MAP\\\"; wget -q -O \\\"$MAP.tmp\\\" \\\"${ROOT}${MAP}\\\" && mv \\\"$MAP.tmp\\\" \\\"$MAP\\\" || rm -f \\\"$MAP.tmp\\\"; done\"",
+        "UpdateSourceConditionSetting": "MapPack",
+        "UpdateSourceConditionValue": "TastyspleenAll",
+        "SkipOnFailure": false
+    }
+]
