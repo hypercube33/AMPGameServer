@@ -1,17 +1,35 @@
 [
     {
-        "DisplayName": "Game / Mod Directory",
+        "DisplayName": "Game / Mod",
         "Category": "Quake II:videogame_asset",
         "Subcategory": "Game / Mod:extension:1",
-        "Description": "Q2 game directory. baseq2 for vanilla, or a compatible mod directory such as ctf, chaos, arena, lithium or action.",
-        "Keywords": "game,mod,directory",
+        "Description": "Select the Quake II game directory. Vanilla and verified one-click mods install during Update; legacy presets select the correct game directory after you place the original mod package in the server folder.",
+        "Keywords": "game,mod,preset,directory",
         "FieldName": "GameDir",
-        "InputType": "text",
+        "InputType": "enum",
         "ParamFieldName": "GameDir",
         "IncludeInCommandLine": false,
         "DefaultValue": "baseq2",
-        "Placeholder": "baseq2",
-        "EnumValues": {}
+        "EnumValues": {
+            "baseq2": "Vanilla Quake II",
+            "weapons": "Weapons of Destruction (AUTO-INSTALL)",
+            "action": "Action Quake II / AQtion",
+            "ctf": "ThreeWave / Quake II CTF",
+            "4team": "4-Team CTF",
+            "freeze": "Freeze Tag",
+            "ctc": "Catch the Chicken",
+            "arena": "Rocket Arena 2",
+            "chaos": "Chaos Deathmatch",
+            "jail": "Jailbreak",
+            "redrover": "Red Rover",
+            "qpong": "QPong",
+            "wf": "Weapons Factory CTF",
+            "lmctf": "LMCTF",
+            "holywars": "Holy Wars II",
+            "lithium": "Lithium II",
+            "gloom": "Gloom (external/manual only)",
+            "vortex": "Vortex (external/manual only)"
+        }
     },
     {
         "DisplayName": "Server Name",
